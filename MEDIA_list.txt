@@ -1,0 +1,12 @@
+rbc   -25232578   i
+izvestia    -27532693   g
+vedomosti   -15548215   i
+rt_russian  -40316705   g
+tassagency  -26284064   g
+oldlentach  -29534144   i
+lifenews    -24199209   g
+ria   -15755094   g
+kommersant_ru     -23482909   i
+rgru  -23304496   g
+meduzaproject     -76982440   i
+fontanka    -18901857   i

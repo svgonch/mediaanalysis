@@ -46,9 +46,9 @@ media_search <- function(media_name = "all", query = "", query_grep = "", count 
       ## formula if count > 100
       zapros <- NULL
       if(count > 100) {
-            nt <- round(count/100, 0)
+            nt <- ceiling(count/100)
             offset = -100
-            for(f in 1:(nt+1)) {
+            for(f in 1:nt) {
                   offset <- offset + 100
                   count = 100
                   for(i in 1:length(id)) {
@@ -82,7 +82,7 @@ media_search <- function(media_name = "all", query = "", query_grep = "", count 
                   }
             }
       }
-      ## formula of count <= 100
+      ## formula if count <= 100
       else {for(i in 1:length(id)) {
             zapros <- NULL
             zapros <- paste(wa_se, owner_id, id[i], query_form, query, own, counting, count, offsetting, offset, ext, fields, vers, "&access_token=", token, sep = "")
@@ -113,8 +113,6 @@ media_search <- function(media_name = "all", query = "", query_grep = "", count 
       media_data$grep <- factor(media_data$grep, labels = c("no","yes"))
       media_data$media_name <- factor(media_data$media_name, levels = media$num, labels = media$name)
       assign("media_data", media_data, envir = globalenv())
-      assign("xxx", xxx, envir = globalenv())
-      assign("yyy", yyy, envir = globalenv())
 }
 
 ## MISC
